@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: "Raleway" , sans-serif;
+}
+
+/*Titre*/
+.titre{
+	text-align: center;
+	background-color: #fff;
+}
+
+/*Navigation*/
+nav{
+	padding: 10px;
+	text-align: center;
+	background-color: #f05050;
+}
+nav a{
+	margin: 0 10px 0 10px;
+	color: #fff;
+	text-decoration: none;
+}
+
+
+/* Diaporama */
+main{
+	width: 100%;
+}
+.diapo{
+	overflow: hidden;
+	position: relative;
+}
+.elements{
+	display: flex;
+}
+.element{
+	flex: 1 0 100%;
+	width: 100%;
+	height: 100%;
+}
+.element > img{
+	width: 100%;
+	height: calc(100vh - 76px);
+	background-size: cover;
+}
+#nav-gauche, #nav-droite{
+	margin: 10px;
+	position: absolute;
+	top: 45%;
+	transform: translateY(-50%);
+	background-color: #f05050;
+	border-radius: 10px;
+	border:none;
+	color: #fff;
+	text-align: center;
+	font-size: 40px;      /*font-size: 2rem;*/
+	height: 100px;
+	width: 50px;
+	cursor: pointer;
+}
+#nav-droite{
+	right: 0%;
+}
+#nav-gauche{
+	left: 0%;
+}
+#nav-gauche:hover, #nav-droite:hover{
+	transition: all 0.4s ease;
+	background-color: #fff;
+	color: #f05050;
+}
+@media screen and (max-width: 750px) {
+	.element > img{
+		height: auto;
+	}
+	#nav-gauche, #nav-droite{
+		visibility: hidden;
+	}
+}
+
+/*Achat*/
+.achat{
+	margin: 100px 0 100px 0;
+	text-align: center;
+	color: #f05050;
+}
+.achat h3{
+	margin: 0 20vw 0 20vw;
+	font-size: 50px;
+}
+.achat h4{
+	margin: 0 20vw 0 20vw;
+	font-size: 15px;
+}
+.grille {
+	margin: 30px auto;
+	display: grid;
+    grid-template-columns: repeat(auto-fill,215px);
+    justify-content: center;
+    grid-gap: 20px;
+}
+.article img{
+	width: 100%;
+	height: auto;
+	border: 3px solid;
+	border-radius: 4px;
+}
+.article p{
+	text-align: left;
+	color: #a00;
+}
+.article {
+  position: relative;
+}
+.overlay {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #f03030;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+
+.article:hover .overlay {
+  top: 50%;
+  height: 25%;
+}
+.text {
+  white-space: nowrap; 
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 900px) {
+  .grille {
+    grid-template-columns: repeat(auto-fill,40%);
+  }
+  .achat{
+	margin: 50px 0 50px 0;
+	}
+}
+
+/*A propros*/
+.a-propos{
+	width: 100%;
+	height: auto;
+	color: #fff;
+	display: flex;
+	flex-direction: columns;
+	background-color: #f05050;
+	justify-content: center;
+}
+.a-propos .partie h3{
+	font-size: 50px;
+}
+.a-propos .partie h4{
+	font-size: 15px;
+}
+.partie{
+	flex-grow: 1;
+	width: 50%;
+}
+.partie:nth-child(1){
+	padding: 5vw;
+	background-color: #f05050;
+}
+.partie:nth-child(2){
+	background: url(https://cache.magazine-avantages.fr/data/photo/w1000_ci/5r/bouteille-de-vin-entamee-ouverte.jpg);
+	background-size: cover;
+	background-position: center;
+}
+@media screen and (max-width: 750px) {
+  .partie:nth-child(2){
+	width: 0;
+	}
+}
+
+/*Footer*/
+footer{
+	padding-top: 35px;
+	text-align: center;
+}
+
+
+/*la scrollbar*/
+ ::-webkit-scrollbar {
+     width: 6px;
+ }
+ ::-webkit-scrollbar-thumb {
+     background: #f03030;
+     border-radius: 5px;
+}
