@@ -92,11 +92,11 @@ main{
 }
 .achat h3{
 	margin: 0 20vw 0 20vw;
-	font-size: 50px;
+	font-size: 3.1em;
 }
 .achat h4{
 	margin: 0 20vw 0 20vw;
-	font-size: 15px;
+	font-size: 1em;
 }
 .grille {
 	margin: 30px auto;
@@ -151,6 +151,12 @@ main{
   }
   .achat{
 	margin: 50px 0 50px 0;
+	}
+	.achat h3{
+	font-size: 1.5em;
+	}
+	.achat h4{
+	font-size: 0.8em;
 	}
 }
 
